@@ -15,12 +15,12 @@ import com.ensody.reactivestate.android.savedInstanceState
 import com.ensody.reactivestate.withErrorReporting
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.ResultPoint
-import com.ibm.health.common.navigation.android.findNavigator
 import com.journeyapps.barcodescanner.*
 import de.rki.covpass.commonapp.BaseFragment
 import de.rki.covpass.commonapp.databinding.FragmentQrScannerBinding
 import de.rki.covpass.commonapp.utils.getScreenSize
 import de.rki.covpass.commonapp.utils.isCameraPermissionGranted
+import de.rki.covpass.sdk.navigation.findNavigator
 import de.rki.covpass.sdk.utilslib.viewBinding
 
 /**

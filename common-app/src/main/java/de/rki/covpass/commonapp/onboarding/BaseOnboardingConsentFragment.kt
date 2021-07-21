@@ -9,10 +9,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import com.ensody.reactivestate.MutableValueFlow
-import com.ibm.health.common.navigation.android.findNavigator
 import de.rki.covpass.commonapp.BaseFragment
 import de.rki.covpass.commonapp.R
 import de.rki.covpass.commonapp.databinding.OnboardingConsentBinding
+import de.rki.covpass.sdk.navigation.findNavigator
 import de.rki.covpass.sdk.utilslib.viewBinding
 
 /**

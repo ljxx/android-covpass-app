@@ -18,7 +18,6 @@ import androidx.core.view.isGone
 import com.ensody.reactivestate.android.autoRun
 import com.ensody.reactivestate.android.reactiveState
 import com.ensody.reactivestate.get
-import com.ibm.health.common.navigation.android.findNavigator
 import de.rki.covpass.app.R
 import de.rki.covpass.app.databinding.DgcEntryDetailBinding
 import de.rki.covpass.app.dependencies.covpassDeps
@@ -29,6 +28,7 @@ import de.rki.covpass.commonapp.dialog.DialogModel
 import de.rki.covpass.commonapp.dialog.showDialog
 import de.rki.covpass.commonapp.utils.stripUnderlines
 import de.rki.covpass.sdk.cert.models.*
+import de.rki.covpass.sdk.navigation.findNavigator
 import de.rki.covpass.sdk.utilslib.attachToolbar
 import de.rki.covpass.sdk.utilslib.getSpanned
 import de.rki.covpass.sdk.utilslib.viewBinding

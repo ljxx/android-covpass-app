@@ -6,7 +6,7 @@
 package de.rki.covpass.commonapp
 
 import android.os.Bundle
-import com.ibm.health.common.navigation.android.*
+import de.rki.covpass.sdk.navigation.*
 import kotlinx.parcelize.Parcelize
 
 /** Displays a fragment (via a [FragmentNav]) in its own activity. */

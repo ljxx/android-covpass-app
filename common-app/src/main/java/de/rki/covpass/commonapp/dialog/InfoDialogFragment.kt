@@ -14,10 +14,10 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.ibm.health.common.navigation.android.FragmentDestination
-import com.ibm.health.common.navigation.android.getArgs
-import com.ibm.health.common.navigation.android.withArgs
 import de.rki.covpass.commonapp.databinding.DialogTitleBinding
+import de.rki.covpass.sdk.navigation.FragmentDestination
+import de.rki.covpass.sdk.navigation.getArgs
+import de.rki.covpass.sdk.navigation.withArgs
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

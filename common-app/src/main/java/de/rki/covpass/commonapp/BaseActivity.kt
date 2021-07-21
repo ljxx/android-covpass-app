@@ -8,10 +8,10 @@ package de.rki.covpass.commonapp
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.annotation.LayoutRes
-import com.ibm.health.common.annotations.Continue
-import com.ibm.health.common.navigation.android.Navigator
-import com.ibm.health.common.navigation.android.NavigatorOwner
 import de.rki.covpass.commonapp.dependencies.commonDeps
+import de.rki.covpass.sdk.annotationslib.Continue
+import de.rki.covpass.sdk.navigation.Navigator
+import de.rki.covpass.sdk.navigation.NavigatorOwner
 import de.rki.covpass.sdk.utilslib.BaseHookedActivity
 import de.rki.covpass.sdk.utilslib.isDebuggable
 

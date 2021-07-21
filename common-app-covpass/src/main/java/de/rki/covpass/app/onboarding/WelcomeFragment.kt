@@ -5,9 +5,9 @@
 
 package de.rki.covpass.app.onboarding
 
-import com.ibm.health.common.navigation.android.FragmentNav
 import de.rki.covpass.app.R
 import de.rki.covpass.commonapp.onboarding.BaseWelcomeFragment
+import de.rki.covpass.sdk.navigation.FragmentNav
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

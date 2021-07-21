@@ -11,23 +11,23 @@ include ':covpass-sdk'
 include ':covpass-sdk-demo'
 
 // SDK utils
-include ':annotations'
+//include ':annotations'
 //include ':covpass-base45'
-include ':covpass-http'
+//include ':covpass-http'
 include ':covpass-logging'
 
 // Apps
-include ':app-covpass-check-demo'
-include ':app-covpass-check-prod'
-include ':app-covpass-demo'
+//include ':app-covpass-check-demo'
+//include ':app-covpass-check-prod'
+//include ':app-covpass-demo'
 include ':app-covpass-prod'
 include ':common-app-covpass'
 include ':common-app-covpass-check'
 include ':common-app'
 
 // App-only utils (not used by SDK)
-include ':android-utils'
-include ':navigation'
+//include ':android-utils'
+//include ':navigation'
 include ':securityprovider'
 
 // How to include locally cloned repos / composing builds:

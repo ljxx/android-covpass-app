@@ -7,10 +7,10 @@ package de.rki.covpass.commonapp.onboarding
 
 import android.os.Bundle
 import android.view.View
-import com.ibm.health.common.navigation.android.FragmentNav
-import com.ibm.health.common.navigation.android.findNavigator
 import de.rki.covpass.commonapp.BaseFragment
 import de.rki.covpass.commonapp.databinding.WelcomeBinding
+import de.rki.covpass.sdk.navigation.FragmentNav
+import de.rki.covpass.sdk.navigation.findNavigator
 import de.rki.covpass.sdk.utilslib.viewBinding
 
 /**

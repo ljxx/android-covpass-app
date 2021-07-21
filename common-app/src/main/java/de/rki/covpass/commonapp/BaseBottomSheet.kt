@@ -13,9 +13,9 @@ import android.view.ViewTreeObserver
 import androidx.annotation.StringRes
 import com.ensody.reactivestate.android.onDestroyView
 import com.ensody.reactivestate.validUntil
-import com.ibm.health.common.navigation.android.SheetPaneNavigation
-import com.ibm.health.common.navigation.android.triggerBackPress
 import de.rki.covpass.commonapp.databinding.BottomSheetViewBinding
+import de.rki.covpass.sdk.navigation.SheetPaneNavigation
+import de.rki.covpass.sdk.navigation.triggerBackPress
 
 /** Common base bottom sheet. */
 public abstract class BaseBottomSheet : BaseFragment(), SheetPaneNavigation {

@@ -7,7 +7,7 @@ package de.rki.covpass.commonapp.dialog
 
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
-import com.ibm.health.common.navigation.android.findInHierarchyOrNull
+import de.rki.covpass.sdk.navigation.findInHierarchyOrNull
 
 public fun showDialog(dialogModel: DialogModel, fragmentManager: FragmentManager) {
     if (!fragmentManager.isDestroyed && !fragmentManager.isStateSaved) {

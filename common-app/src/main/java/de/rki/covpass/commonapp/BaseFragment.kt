@@ -6,11 +6,11 @@
 package de.rki.covpass.commonapp
 
 import androidx.annotation.LayoutRes
-import com.ibm.health.common.annotations.Abortable
-import com.ibm.health.common.annotations.Continue
-import com.ibm.health.common.navigation.android.NavigatorOwner
-import com.ibm.health.common.navigation.android.OnBackPressedNavigation
 import de.rki.covpass.commonapp.dependencies.commonDeps
+import de.rki.covpass.sdk.annotationslib.Abortable
+import de.rki.covpass.sdk.annotationslib.Continue
+import de.rki.covpass.sdk.navigation.NavigatorOwner
+import de.rki.covpass.sdk.navigation.OnBackPressedNavigation
 import de.rki.covpass.sdk.utilslib.BaseHookedFragment
 
 /** Common base fragment with some common functionality like error handling or loading behaviour. */

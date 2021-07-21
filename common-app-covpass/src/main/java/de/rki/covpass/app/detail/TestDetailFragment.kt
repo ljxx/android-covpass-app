@@ -5,12 +5,12 @@
 
 package de.rki.covpass.app.detail
 
-import com.ibm.health.common.navigation.android.FragmentNav
-import com.ibm.health.common.navigation.android.getArgs
 import de.rki.covpass.app.R
 import de.rki.covpass.sdk.cert.*
 import de.rki.covpass.sdk.cert.models.CovCertificate
 import de.rki.covpass.sdk.cert.models.Test
+import de.rki.covpass.sdk.navigation.FragmentNav
+import de.rki.covpass.sdk.navigation.getArgs
 import de.rki.covpass.sdk.utils.formatDateTimeInternational
 import de.rki.covpass.sdk.utils.formatInternationalOrEmpty
 import de.rki.covpass.sdk.utils.toDeviceTimeZone

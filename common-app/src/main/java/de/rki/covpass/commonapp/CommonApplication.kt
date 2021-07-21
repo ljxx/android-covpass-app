@@ -11,7 +11,6 @@ import androidx.fragment.app.FragmentActivity
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkManager
-import com.ibm.health.common.navigation.android.*
 import com.ibm.health.common.securityprovider.initSecurityProvider
 import de.rki.covpass.logging.Lumber
 import de.rki.covpass.sdk.cert.toTrustedCerts
@@ -19,6 +18,7 @@ import de.rki.covpass.sdk.dependencies.SdkDependencies
 import de.rki.covpass.sdk.dependencies.sdkDeps
 import de.rki.covpass.sdk.httplib.HttpLogLevel
 import de.rki.covpass.sdk.httplib.httpConfig
+import de.rki.covpass.sdk.navigation.*
 import de.rki.covpass.sdk.utils.DSC_UPDATE_INTERVAL_HOURS
 import de.rki.covpass.sdk.utils.DscListUpdater
 import de.rki.covpass.sdk.utilslib.AndroidDependencies

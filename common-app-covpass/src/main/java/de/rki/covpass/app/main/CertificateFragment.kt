@@ -16,9 +16,6 @@ import com.ensody.reactivestate.dispatchers
 import com.ensody.reactivestate.get
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType
-import com.ibm.health.common.navigation.android.FragmentNav
-import com.ibm.health.common.navigation.android.findNavigator
-import com.ibm.health.common.navigation.android.getArgs
 import com.journeyapps.barcodescanner.BarcodeEncoder
 import de.rki.covpass.app.R
 import de.rki.covpass.app.databinding.CertificateBinding
@@ -32,6 +29,9 @@ import de.rki.covpass.sdk.cert.models.Recovery
 import de.rki.covpass.sdk.cert.models.Test
 import de.rki.covpass.sdk.cert.models.Vaccination
 import de.rki.covpass.sdk.cert.models.VaccinationCertType
+import de.rki.covpass.sdk.navigation.FragmentNav
+import de.rki.covpass.sdk.navigation.findNavigator
+import de.rki.covpass.sdk.navigation.getArgs
 import de.rki.covpass.sdk.utils.formatDateOrEmpty
 import de.rki.covpass.sdk.utils.formatDateTime
 import de.rki.covpass.sdk.utils.toDeviceTimeZone

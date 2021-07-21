@@ -10,13 +10,13 @@ import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.ibm.health.common.navigation.android.findNavigator
 import de.rki.covpass.commonapp.BaseFragment
 import de.rki.covpass.commonapp.OpenSourceLicenseFragmentNav
 import de.rki.covpass.commonapp.R
 import de.rki.covpass.commonapp.databinding.InformationBinding
 import de.rki.covpass.commonapp.onboarding.DataProtectionFragmentNav
 import de.rki.covpass.commonapp.utils.stripUnderlines
+import de.rki.covpass.sdk.navigation.findNavigator
 import de.rki.covpass.sdk.utilslib.appVersion
 import de.rki.covpass.sdk.utilslib.attachToolbar
 import de.rki.covpass.sdk.utilslib.getSpanned

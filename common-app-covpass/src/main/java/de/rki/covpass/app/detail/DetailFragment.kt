@@ -15,12 +15,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.ensody.reactivestate.android.autoRun
 import com.ensody.reactivestate.android.reactiveState
 import com.ensody.reactivestate.get
-import com.ibm.health.common.annotations.Abort
-import com.ibm.health.common.annotations.Abortable
-import com.ibm.health.common.navigation.android.FragmentNav
-import com.ibm.health.common.navigation.android.findNavigator
-import com.ibm.health.common.navigation.android.getArgs
-import com.ibm.health.common.navigation.android.triggerBackPress
 import de.rki.covpass.app.R
 import de.rki.covpass.app.databinding.DetailBinding
 import de.rki.covpass.app.dependencies.covpassDeps
@@ -29,7 +23,13 @@ import de.rki.covpass.app.detail.adapter.DetailItem
 import de.rki.covpass.commonapp.BaseFragment
 import de.rki.covpass.commonapp.dialog.DialogModel
 import de.rki.covpass.commonapp.dialog.showDialog
+import de.rki.covpass.sdk.annotationslib.Abort
+import de.rki.covpass.sdk.annotationslib.Abortable
 import de.rki.covpass.sdk.cert.models.*
+import de.rki.covpass.sdk.navigation.FragmentNav
+import de.rki.covpass.sdk.navigation.findNavigator
+import de.rki.covpass.sdk.navigation.getArgs
+import de.rki.covpass.sdk.navigation.triggerBackPress
 import de.rki.covpass.sdk.utils.*
 import de.rki.covpass.sdk.utilslib.attachToolbar
 import de.rki.covpass.sdk.utilslib.viewBinding
