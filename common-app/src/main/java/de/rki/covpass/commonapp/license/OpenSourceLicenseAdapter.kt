@@ -10,12 +10,12 @@ import android.text.method.LinkMovementMethod
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import com.ibm.health.common.android.utils.BaseRecyclerViewAdapter
-import com.ibm.health.common.android.utils.BindingViewHolder
-import com.ibm.health.common.android.utils.getSpanned
 import de.rki.covpass.commonapp.databinding.OpenSourceItemBinding
 import de.rki.covpass.commonapp.license.models.OpenSourceItem
 import de.rki.covpass.commonapp.utils.stripUnderlines
+import de.rki.covpass.sdk.utilslib.BaseRecyclerViewAdapter
+import de.rki.covpass.sdk.utilslib.BindingViewHolder
+import de.rki.covpass.sdk.utilslib.getSpanned
 
 /**
  * [BaseRecyclerViewAdapter] which holds a list of [OpenSourceItem]

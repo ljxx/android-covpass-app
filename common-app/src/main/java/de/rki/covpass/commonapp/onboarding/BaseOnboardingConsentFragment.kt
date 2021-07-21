@@ -9,11 +9,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import com.ensody.reactivestate.MutableValueFlow
-import com.ibm.health.common.android.utils.viewBinding
 import com.ibm.health.common.navigation.android.findNavigator
 import de.rki.covpass.commonapp.BaseFragment
 import de.rki.covpass.commonapp.R
 import de.rki.covpass.commonapp.databinding.OnboardingConsentBinding
+import de.rki.covpass.sdk.utilslib.viewBinding
 
 /**
  * Common base fragment for displaying a data privacy consent to the user. Both apps use basically the same fragment,

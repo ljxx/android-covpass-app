@@ -6,9 +6,9 @@
 package de.rki.covpass.app.main
 
 import com.ensody.reactivestate.BaseReactiveState
-import com.ibm.health.common.android.utils.BaseEvents
 import de.rki.covpass.app.dependencies.covpassDeps
 import de.rki.covpass.sdk.cert.models.GroupedCertificatesId
+import de.rki.covpass.sdk.utilslib.BaseEvents
 import kotlinx.coroutines.CoroutineScope
 
 /**

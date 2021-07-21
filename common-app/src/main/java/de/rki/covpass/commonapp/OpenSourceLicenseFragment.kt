@@ -9,14 +9,14 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ibm.health.common.android.utils.androidDeps
-import com.ibm.health.common.android.utils.attachToolbar
-import com.ibm.health.common.android.utils.viewBinding
 import com.ibm.health.common.navigation.android.FragmentNav
 import de.rki.covpass.commonapp.databinding.OpenSourceLicenseBinding
 import de.rki.covpass.commonapp.license.OpenSourceLicenseAdapter
 import de.rki.covpass.commonapp.license.models.OpenSourceItem
 import de.rki.covpass.sdk.utils.readTextAsset
+import de.rki.covpass.sdk.utilslib.androidDeps
+import de.rki.covpass.sdk.utilslib.attachToolbar
+import de.rki.covpass.sdk.utilslib.viewBinding
 import kotlinx.parcelize.Parcelize
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json

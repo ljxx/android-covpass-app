@@ -8,12 +8,12 @@ package de.rki.covpass.app.validitycheck
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
-import com.ibm.health.common.android.utils.viewBinding
 import com.ibm.health.common.navigation.android.FragmentNav
 import com.ibm.health.common.navigation.android.findNavigator
 import de.rki.covpass.app.R
 import de.rki.covpass.app.databinding.ValidityCheckPopupContentBinding
 import de.rki.covpass.commonapp.BaseBottomSheet
+import de.rki.covpass.sdk.utilslib.viewBinding
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

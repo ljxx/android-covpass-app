@@ -10,10 +10,6 @@ import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.ibm.health.common.android.utils.appVersion
-import com.ibm.health.common.android.utils.attachToolbar
-import com.ibm.health.common.android.utils.getSpanned
-import com.ibm.health.common.android.utils.viewBinding
 import com.ibm.health.common.navigation.android.findNavigator
 import de.rki.covpass.commonapp.BaseFragment
 import de.rki.covpass.commonapp.OpenSourceLicenseFragmentNav
@@ -21,6 +17,10 @@ import de.rki.covpass.commonapp.R
 import de.rki.covpass.commonapp.databinding.InformationBinding
 import de.rki.covpass.commonapp.onboarding.DataProtectionFragmentNav
 import de.rki.covpass.commonapp.utils.stripUnderlines
+import de.rki.covpass.sdk.utilslib.appVersion
+import de.rki.covpass.sdk.utilslib.attachToolbar
+import de.rki.covpass.sdk.utilslib.getSpanned
+import de.rki.covpass.sdk.utilslib.viewBinding
 
 /**
  * Common base fragment to display the faq, imprint etc. Both apps use the same fragment, only the different links are

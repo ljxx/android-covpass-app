@@ -10,7 +10,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.ensody.reactivestate.MutableValueFlow
 import com.ensody.reactivestate.android.onDestroyViewOnce
-import com.ibm.health.common.android.utils.BaseFragmentStateAdapter
+import de.rki.covpass.sdk.utilslib.BaseFragmentStateAdapter
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 

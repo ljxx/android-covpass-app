@@ -16,7 +16,6 @@ import com.ensody.reactivestate.dispatchers
 import com.ensody.reactivestate.get
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType
-import com.ibm.health.common.android.utils.viewBinding
 import com.ibm.health.common.navigation.android.FragmentNav
 import com.ibm.health.common.navigation.android.findNavigator
 import com.ibm.health.common.navigation.android.getArgs
@@ -36,6 +35,7 @@ import de.rki.covpass.sdk.cert.models.VaccinationCertType
 import de.rki.covpass.sdk.utils.formatDateOrEmpty
 import de.rki.covpass.sdk.utils.formatDateTime
 import de.rki.covpass.sdk.utils.toDeviceTimeZone
+import de.rki.covpass.sdk.utilslib.viewBinding
 import kotlinx.coroutines.invoke
 import kotlinx.parcelize.Parcelize
 import java.time.LocalDate

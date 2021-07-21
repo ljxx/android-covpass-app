@@ -6,7 +6,7 @@
 apply plugin: 'kotlinx-serialization'
 
 dependencies {
-    api project(":android-utils")
+//    api project(":android-utils")
 //    api project(':covpass-http')
     api project(":navigation")
     api project(":securityprovider")

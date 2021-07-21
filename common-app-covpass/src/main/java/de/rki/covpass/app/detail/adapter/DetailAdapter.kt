@@ -15,8 +15,6 @@ import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import com.ibm.health.common.android.utils.BaseRecyclerViewAdapter
-import com.ibm.health.common.android.utils.BindingViewHolder
 import de.rki.covpass.app.R
 import de.rki.covpass.app.databinding.*
 import de.rki.covpass.app.detail.DetailClickListener
@@ -24,6 +22,8 @@ import de.rki.covpass.sdk.cert.models.DGCEntryType
 import de.rki.covpass.sdk.cert.models.RecoveryCertType
 import de.rki.covpass.sdk.cert.models.TestCertType
 import de.rki.covpass.sdk.cert.models.VaccinationCertType
+import de.rki.covpass.sdk.utilslib.BaseRecyclerViewAdapter
+import de.rki.covpass.sdk.utilslib.BindingViewHolder
 
 /**
  * Adapter which holds the data for Detail screen.

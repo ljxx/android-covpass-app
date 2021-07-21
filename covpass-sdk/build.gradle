@@ -18,6 +18,11 @@ dependencies {
 
     timber() //logging
     ktor() //http
+
+    //utils
+    androidUI()
+    coroutines()
+    reactiveState()
 }
 
 apply from: "$projectDir/download-dsc-list.gradle"

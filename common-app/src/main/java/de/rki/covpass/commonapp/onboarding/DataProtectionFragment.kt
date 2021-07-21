@@ -9,11 +9,11 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
-import com.ibm.health.common.android.utils.viewBinding
 import com.ibm.health.common.navigation.android.FragmentNav
 import de.rki.covpass.commonapp.BaseBottomSheet
 import de.rki.covpass.commonapp.R
 import de.rki.covpass.commonapp.databinding.DataProtectionBinding
+import de.rki.covpass.sdk.utilslib.viewBinding
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

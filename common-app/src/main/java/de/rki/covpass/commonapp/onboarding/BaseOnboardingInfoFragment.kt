@@ -7,9 +7,9 @@ package de.rki.covpass.commonapp.onboarding
 
 import android.os.Bundle
 import android.view.View
-import com.ibm.health.common.android.utils.viewBinding
 import de.rki.covpass.commonapp.BaseFragment
 import de.rki.covpass.commonapp.databinding.OnboardingInfoBinding
+import de.rki.covpass.sdk.utilslib.viewBinding
 
 /**
  * Common base fragment for displaying an onboarding info page to the user. Both apps use multiple variations of

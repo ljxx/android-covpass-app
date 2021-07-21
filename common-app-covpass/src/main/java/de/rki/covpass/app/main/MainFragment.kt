@@ -15,7 +15,6 @@ import com.ensody.reactivestate.android.reactiveState
 import com.ensody.reactivestate.get
 import com.ensody.reactivestate.validUntil
 import com.google.android.material.tabs.TabLayoutMediator
-import com.ibm.health.common.android.utils.viewBinding
 import com.ibm.health.common.navigation.android.FragmentNav
 import com.ibm.health.common.navigation.android.findNavigator
 import de.rki.covpass.app.R
@@ -31,6 +30,7 @@ import de.rki.covpass.commonapp.BaseFragment
 import de.rki.covpass.commonapp.dialog.DialogModel
 import de.rki.covpass.commonapp.dialog.showDialog
 import de.rki.covpass.sdk.cert.models.GroupedCertificatesId
+import de.rki.covpass.sdk.utilslib.viewBinding
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

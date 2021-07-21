@@ -8,8 +8,6 @@ package de.rki.covpass.app.add
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.view.View
-import com.ibm.health.common.android.utils.getSpanned
-import com.ibm.health.common.android.utils.viewBinding
 import com.ibm.health.common.navigation.android.FragmentNav
 import com.ibm.health.common.navigation.android.findNavigator
 import de.rki.covpass.app.R
@@ -17,6 +15,8 @@ import de.rki.covpass.app.databinding.AddCovCertPopupContentBinding
 import de.rki.covpass.app.scanner.CovPassQRScannerFragmentNav
 import de.rki.covpass.commonapp.BaseBottomSheet
 import de.rki.covpass.commonapp.utils.stripUnderlines
+import de.rki.covpass.sdk.utilslib.getSpanned
+import de.rki.covpass.sdk.utilslib.viewBinding
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

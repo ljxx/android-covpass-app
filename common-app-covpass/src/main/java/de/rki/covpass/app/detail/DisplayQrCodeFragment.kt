@@ -16,7 +16,6 @@ import com.ensody.reactivestate.dispatchers
 import com.ensody.reactivestate.get
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType
-import com.ibm.health.common.android.utils.viewBinding
 import com.ibm.health.common.navigation.android.FragmentNav
 import com.ibm.health.common.navigation.android.getArgs
 import com.ibm.health.common.navigation.android.triggerBackPress
@@ -27,6 +26,7 @@ import de.rki.covpass.app.dependencies.covpassDeps
 import de.rki.covpass.sdk.cert.models.GroupedCertificatesList
 import de.rki.covpass.commonapp.BaseBottomSheet
 import de.rki.covpass.sdk.cert.models.CovCertificate
+import de.rki.covpass.sdk.utilslib.viewBinding
 import kotlinx.coroutines.invoke
 import kotlinx.parcelize.Parcelize
 

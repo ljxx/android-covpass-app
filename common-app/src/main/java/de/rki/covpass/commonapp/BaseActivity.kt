@@ -8,12 +8,12 @@ package de.rki.covpass.commonapp
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.annotation.LayoutRes
-import com.ibm.health.common.android.utils.BaseHookedActivity
-import com.ibm.health.common.android.utils.isDebuggable
 import com.ibm.health.common.annotations.Continue
 import com.ibm.health.common.navigation.android.Navigator
 import com.ibm.health.common.navigation.android.NavigatorOwner
 import de.rki.covpass.commonapp.dependencies.commonDeps
+import de.rki.covpass.sdk.utilslib.BaseHookedActivity
+import de.rki.covpass.sdk.utilslib.isDebuggable
 
 /** Common base activity with some common functionality like error handling or loading behaviour. */
 public abstract class BaseActivity(@LayoutRes contentLayoutId: Int = 0) :

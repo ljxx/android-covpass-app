@@ -15,8 +15,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.ensody.reactivestate.android.autoRun
 import com.ensody.reactivestate.android.reactiveState
 import com.ensody.reactivestate.get
-import com.ibm.health.common.android.utils.attachToolbar
-import com.ibm.health.common.android.utils.viewBinding
 import com.ibm.health.common.annotations.Abort
 import com.ibm.health.common.annotations.Abortable
 import com.ibm.health.common.navigation.android.FragmentNav
@@ -33,6 +31,8 @@ import de.rki.covpass.commonapp.dialog.DialogModel
 import de.rki.covpass.commonapp.dialog.showDialog
 import de.rki.covpass.sdk.cert.models.*
 import de.rki.covpass.sdk.utils.*
+import de.rki.covpass.sdk.utilslib.attachToolbar
+import de.rki.covpass.sdk.utilslib.viewBinding
 import kotlinx.parcelize.Parcelize
 
 /**

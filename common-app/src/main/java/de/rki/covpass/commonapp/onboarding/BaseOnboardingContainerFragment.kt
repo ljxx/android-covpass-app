@@ -11,13 +11,13 @@ import androidx.core.view.isInvisible
 import com.ensody.reactivestate.android.autoRun
 import com.ensody.reactivestate.get
 import com.google.android.material.tabs.TabLayoutMediator
-import com.ibm.health.common.android.utils.viewBinding
 import com.ibm.health.common.annotations.Abort
 import com.ibm.health.common.annotations.Abortable
 import com.ibm.health.common.annotations.Continue
 import de.rki.covpass.commonapp.BaseFragment
 import de.rki.covpass.commonapp.databinding.OnboardingContainerBinding
 import de.rki.covpass.commonapp.utils.SimpleFragmentStateAdapter
+import de.rki.covpass.sdk.utilslib.viewBinding
 
 /**
  * Abstract base container fragment for the onboarding fragments. It hosts a viewpager to add the actual onboarding

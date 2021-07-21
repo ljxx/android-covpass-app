@@ -7,11 +7,11 @@ package de.rki.covpass.commonapp.onboarding
 
 import android.os.Bundle
 import android.view.View
-import com.ibm.health.common.android.utils.viewBinding
 import com.ibm.health.common.navigation.android.FragmentNav
 import com.ibm.health.common.navigation.android.findNavigator
 import de.rki.covpass.commonapp.BaseFragment
 import de.rki.covpass.commonapp.databinding.WelcomeBinding
+import de.rki.covpass.sdk.utilslib.viewBinding
 
 /**
  * Common base fragment for displaying a welcome page to the user. Both apps use basically the same fragment,

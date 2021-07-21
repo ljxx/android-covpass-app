@@ -8,7 +8,6 @@ package de.rki.covpass.app.scanner
 import com.ensody.reactivestate.BaseReactiveState
 import com.ensody.reactivestate.StateFlowStore
 import com.ensody.reactivestate.getData
-import com.ibm.health.common.android.utils.BaseEvents
 import de.rki.covpass.app.dependencies.covpassDeps
 import de.rki.covpass.sdk.storage.CertRepository
 import de.rki.covpass.sdk.cert.QRCoder
@@ -16,6 +15,7 @@ import de.rki.covpass.sdk.cert.models.CombinedCovCertificate
 import de.rki.covpass.sdk.cert.models.CovCertificate
 import de.rki.covpass.sdk.cert.models.GroupedCertificatesId
 import de.rki.covpass.sdk.dependencies.sdkDeps
+import de.rki.covpass.sdk.utilslib.BaseEvents
 import kotlinx.coroutines.CoroutineScope
 
 /**
