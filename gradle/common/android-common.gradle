@@ -1,0 +1,84 @@
+/*
+ * (C) Copyright IBM Deutschland GmbH 2021
+ * (C) Copyright IBM Corp. 2021
+ */
+
+class Config {
+    Integer minVersion = null
+    Integer targetVersion = null
+    Integer compileSdkVersion = null
+    List<String> disableAndroidLints = []
+    Boolean kotlinExplicitApiMode = true
+    List<String> kotlinCompilerArgs = []
+}
+
+ext.androidCommon = { args = [:] ->
+    apply from: "$rootDir/gradle/common/kotlin-common.gradle"
+
+    Config config = new Config(args)
+
+    int minVersion = config.minVersion ?: 23
+    int targetVersion = config.targetVersion ?: 30
+    int compileVersion = config.compileSdkVersion ?: targetVersion
+
+    kotlinCommon()
+
+    apply plugin: 'kotlin-android'
+    apply plugin: 'kotlin-parcelize'
+
+    android {
+        compileSdkVersion compileVersion
+
+        compileOptions {
+            coreLibraryDesugaringEnabled true
+
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+
+        kotlinOptions {
+            jvmTarget = "1.8"
+            freeCompilerArgs = getCompilerArgs(
+                kotlinExplicitApiMode: config.kotlinExplicitApiMode,
+                kotlinCompilerArgs: config.kotlinCompilerArgs,
+            )
+        }
+
+        defaultConfig {
+            minSdkVersion minVersion
+            targetSdkVersion targetVersion
+            versionCode 1
+            versionName version
+            buildConfigField("String", "MODULE_VERSION", "\"$version\"")
+
+            multiDexEnabled true
+
+            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        }
+
+        lintOptions {
+            disable(*config.disableAndroidLints)
+            checkGeneratedSources = true
+            abortOnError true
+            warningsAsErrors true
+            textReport true
+            textOutput 'stdout'
+            lintConfig file("$rootDir/gradle/common/lint.xml")
+        }
+
+        testOptions {
+            // Needed for Robolectric
+            unitTests {
+                includeAndroidResources = true
+            }
+        }
+
+        packagingOptions {
+            pickFirst 'META-INF/*.kotlin_module'
+        }
+    }
+
+    dependencies {
+        coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+    }
+}

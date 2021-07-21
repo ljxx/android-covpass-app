@@ -1,0 +1,34 @@
+/*
+ * (C) Copyright IBM Deutschland GmbH 2021
+ * (C) Copyright IBM Corp. 2021
+ */
+
+class Config {
+    def input
+    def output = null
+}
+
+ext.twineStrings = { args ->
+    def config = new Config(args)
+    if (config.output == null) {
+        config.output = "${project.projectDir}/src/main/res/values/generated_strings.xml"
+    }
+
+    task generateStrings {
+        inputs.file(config.input)
+        outputs.file(config.output)
+
+        doFirst {
+            exec {
+                commandLine("twine", 'generate-localization-file', config.input, config.output, '--format', "android", '--lang', 'de')
+            }
+        }
+        doLast {
+            ant.replace(
+                file: config.output,
+                token: '<resources>',
+                value: '<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">'
+            )
+        }
+    }
+}

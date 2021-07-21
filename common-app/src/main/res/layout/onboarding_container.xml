@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ (C) Copyright IBM Deutschland GmbH 2021
+  ~ (C) Copyright IBM Corp. 2021
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:gravity="center">
+
+  <androidx.viewpager2.widget.ViewPager2
+    android:id="@+id/onboarding_view_pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/bottom_sheet_bottom_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/common_gradient_fadeout"
+    android:paddingStart="@dimen/grid_two"
+    android:paddingEnd="@dimen/grid_two">
+
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/grid_two"
+      android:animateLayoutChanges="true"
+      app:layout_constraintBottom_toTopOf="@+id/onboarding_tab_layout">
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/onboarding_continue_button"
+        style="@style/PrimaryButton.Dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/app_version" />
+
+      <de.rki.covpass.commonapp.uielements.RoundImageButton
+        android:id="@+id/onboarding_scroll_down_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:round_button_icon="@drawable/arrow_field_down" />
+    </FrameLayout>
+
+    <com.google.android.material.tabs.TabLayout
+      android:id="@+id/onboarding_tab_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/grid_two"
+      android:background="@color/zxing_transparent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:tabBackground="@drawable/view_pager_dot_selector"
+      app:tabIndicator="@drawable/view_pager_dot_selected"
+      app:tabIndicatorColor="@color/brandAccent"
+      app:tabIndicatorGravity="center"
+      app:tabMaxWidth="@dimen/dots_tab_max_width"
+      app:tabRippleColor="@null" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

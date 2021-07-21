@@ -1,0 +1,66 @@
+# We extend the base config:
+# https://github.com/detekt/detekt/blob/master/detekt-core/src/main/resources/default-detekt-config.yml
+
+complexity:
+  # Too aggressive, especially with long when() statements
+  ComplexMethod:
+    active: false
+  LongMethod:
+    active: false
+  LongParameterList:
+    active: false
+  TooManyFunctions:
+    active: false
+
+empty-blocks:
+  EmptyFunctionBlock:
+    active: false
+
+# This is so annoying and almost always wrong that we have to turn it off
+exceptions:
+  TooGenericExceptionCaught:
+    active: false
+  SwallowedException:
+    active: false
+  RethrowCaughtException:
+    active: false
+
+formatting:
+  # Already handled by ktlint
+  MaximumLineLength:
+    active: false
+
+naming:
+  # ktlint already checks this
+  MatchingDeclarationName:
+    active: false
+  MemberNameEqualsClassName:
+    active: false
+  # Way too often we want to name functions like classes. Don't require lowercase initial character, anymore.
+  FunctionNaming:
+    functionPattern: "(_?[a-zA-Z0-9]+)|(`.*`)"
+
+style:
+  ForbiddenComment:
+    active: false
+  LoopWithTooManyJumpStatements:
+    active: false
+  MagicNumber:
+    active: false
+  # Already handled by ktlint
+  MaxLineLength:
+    active: false
+  ReturnCount:
+    active: false
+  # We don't pass Serializable classes around and we don't store them
+  SerialVersionUIDInSerializableClass:
+    active: false
+  ThrowsCount:
+    active: false
+  UnnecessaryAbstractClass:
+    active: false
+  UtilityClassWithPublicConstructor:
+    active: false
+  # Conflicts with Android Studio's default settings
+  WildcardImport:
+    active: false

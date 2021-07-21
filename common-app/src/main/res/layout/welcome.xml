@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ (C) Copyright IBM Deutschland GmbH 2021
+  ~ (C) Copyright IBM Corp. 2021
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <ScrollView
+    android:id="@+id/welcome_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:paddingBottom="@dimen/grid_sixteen">
+
+      <TextView
+        android:id="@+id/welcome_header_textview"
+        style="@style/Header.OnBackground.Extralarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/grid_three"
+        android:paddingTop="@dimen/grid_six"
+        android:paddingBottom="@dimen/grid_one_half"
+        tools:text="@tools:sample/lorem" />
+
+      <TextView
+        android:id="@+id/welcome_subheader_textview"
+        style="@style/SubHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/grid_three"
+        tools:text="@tools:sample/lorem" />
+
+      <ImageView
+        android:id="@+id/welcome_main_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/grid_five"
+        android:layout_marginBottom="@dimen/grid_two"
+        android:adjustViewBounds="true"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/backgrounds/scenic"/>
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+          android:id="@+id/welcome_encryption_header_textview"
+          style="@style/Header.OnBackground.Small"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/grid_nine"
+          android:layout_marginEnd="@dimen/grid_eight"
+          android:gravity="start"
+          tools:text="@tools:sample/lorem" />
+
+        <TextView
+          android:id="@+id/welcome_encryption_textview"
+          style="@style/DefaultText.OnBackground70"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/welcome_encryption_header_textview"
+          android:layout_alignStart="@id/welcome_encryption_header_textview"
+          android:layout_marginEnd="@dimen/grid_four"
+          android:gravity="start"
+          tools:text="@tools:sample/lorem/random" />
+
+        <ImageView
+          android:id="@+id/welcome_encryption_imageview"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="@dimen/grid_four"
+          android:adjustViewBounds="true"
+          android:src="@drawable/lock_outline"
+          tools:ignore="ContentDescription" />
+
+      </RelativeLayout>
+
+    </LinearLayout>
+
+  </ScrollView>
+
+  <FrameLayout
+    android:id="@+id/bottom_sheet_bottom_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/common_gradient_fadeout"
+    android:paddingStart="@dimen/grid_two"
+    android:paddingEnd="@dimen/grid_two">
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/welcome_start_button"
+      style="@style/PrimaryButton.Dark"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginVertical="@dimen/grid_three"
+      android:text="@string/start_onboarding_button_title" />
+
+  </FrameLayout>
+
+</RelativeLayout>

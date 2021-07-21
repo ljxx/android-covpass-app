@@ -1,0 +1,43 @@
+/*
+ * (C) Copyright IBM Deutschland GmbH 2021
+ * (C) Copyright IBM Corp. 2021
+ */
+
+class Config {
+    Boolean kotlinExplicitApiMode = true
+    List<String> kotlinCompilerArgs = []
+}
+
+ext.kotlinLibrary = { args = [:] ->
+    apply from: "$rootDir/gradle/common/kotlin-common.gradle"
+
+    apply plugin: 'java-library'
+    apply plugin: 'kotlin'
+
+    Config config = new Config(args)
+
+    kotlinCommon()
+
+    compileKotlin {
+        kotlinOptions {
+            jvmTarget = "1.8"
+            freeCompilerArgs = getCompilerArgs(
+                kotlinExplicitApiMode: config.kotlinExplicitApiMode,
+                kotlinCompilerArgs: config.kotlinCompilerArgs,
+            )
+        }
+    }
+
+    compileTestKotlin {
+        kotlinOptions {
+            jvmTarget = "1.8"
+            freeCompilerArgs = getCompilerArgs(
+                kotlinExplicitApiMode: config.kotlinExplicitApiMode,
+                kotlinCompilerArgs: config.kotlinCompilerArgs,
+            )
+        }
+    }
+
+    // Behave like Android
+    task testDebugUnitTest(type: Test, dependsOn: ['test'], group: 'verification')
+}

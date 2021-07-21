@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ (C) Copyright IBM Deutschland GmbH 2021
+  ~ (C) Copyright IBM Corp. 2021
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:fillViewport="true">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/grid_twentytwo">
+
+    <ImageView
+      android:id="@+id/onboarding_imageview"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/grid_five"
+      android:adjustViewBounds="true"
+      tools:ignore="ContentDescription" />
+
+    <TextView
+      android:id="@+id/onboarding_info_header_textview"
+      style="@style/Header.OnBackground.Standard"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingHorizontal="@dimen/grid_three"
+      android:paddingBottom="@dimen/grid_one_half" />
+
+    <TextView
+      android:id="@+id/onboarding_info_textview"
+      style="@style/DefaultText.OnBackground70"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingHorizontal="@dimen/grid_three" />
+
+  </LinearLayout>
+
+</ScrollView>

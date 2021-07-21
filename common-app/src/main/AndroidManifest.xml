@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ (C) Copyright IBM Deutschland GmbH 2021
+  ~ (C) Copyright IBM Corp. 2021
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="de.rki.covpass.commonapp">
+
+  <uses-permission android:name="android.permission.INTERNET"/>
+
+  <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
+  <application
+    android:allowBackup="false"
+    android:hardwareAccelerated="true"
+    android:supportsRtl="false"
+    tools:ignore="GoogleAppIndexingWarning,UnusedAttribute"
+    tools:replace="android:allowBackup, android:supportsRtl">
+
+  </application>
+
+</manifest>

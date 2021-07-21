@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ (C) Copyright IBM Deutschland GmbH 2021
+  ~ (C) Copyright IBM Corp. 2021
+  -->
+
+<resources>
+  <!--
+  Button - Primary
+
+  Defines a button which can be used for primary actions. Please check examples for more details.
+
+  Examples:
+  https://ibm.invisionapp.com/d/main#/console/15357523/319528242/preview => "Anmelden"
+  https://ibm.invisionapp.com/d/main#/console/15357523/319528248/preview => "Bestätigen"
+  -->
+  <style name="PrimaryButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+    <item name="android:ellipsize">end</item>
+    <item name="android:fontFamily">@font/ibmplexsans_semibold</item>
+    <item name="android:paddingTop">@dimen/button_padding_vertical</item>
+    <item name="android:paddingBottom">@dimen/button_padding_vertical</item>
+    <item name="android:paddingLeft">@dimen/grid_five</item>
+    <item name="android:paddingRight">@dimen/grid_five</item>
+    <item name="shapeAppearance">@style/ButtonShapeAppearance</item>
+    <item name="android:minWidth">@dimen/button_min_width</item>
+    <item name="android:textAllCaps">false</item>
+    <item name="iconTint">@null</item>
+  </style>
+
+  <style name="PrimaryButton.Dark">
+    <item name="backgroundTint">@drawable/button_primary_background_tint</item>
+    <item name="android:textColor">@drawable/button_primary_text</item>
+  </style>
+
+  <style name="PrimaryButton.Light">
+    <item name="backgroundTint">@color/onInfo</item>
+    <item name="android:textColor">@color/onBackground</item>
+    <item name="rippleColor">@color/brandAccent40</item>
+  </style>
+
+  <!--
+  Button - Secondary
+
+  Defines a button which can be used for secondary actions. Please check examples for more details.
+
+  Examples:
+  https://ibm.invisionapp.com/d/main#/console/15357523/319528244/preview => "Schlüssel vergessen"
+  https://ibm.invisionapp.com/d/main#/console/15357523/319528234/preview => "Alternative mit Ton"
+  -->
+  <style name="SecondaryButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <item name="android:fontFamily">@font/ibmplexsans_semibold</item>
+    <item name="android:minWidth">@dimen/button_min_width</item>
+    <item name="shapeAppearance">@style/ButtonShapeAppearance</item>
+    <item name="strokeWidth">@dimen/grid_eighth</item>
+    <item name="backgroundTint">@color/backgroundSecondary</item>
+    <item name="android:textAllCaps">false</item>
+    <item name="android:paddingLeft">@dimen/grid_five</item>
+    <item name="android:paddingRight">@dimen/grid_five</item>
+  </style>
+
+  <style name="SecondaryButton.Add">
+    <item name="android:textColor">@color/brandAccent70</item>
+    <item name="strokeColor">@color/brandAccent70</item>
+    <item name="android:paddingTop">@dimen/button_padding_vertical_small</item>
+    <item name="android:paddingBottom">@dimen/button_padding_vertical_small</item>
+  </style>
+
+  <style name="SecondaryButton.Delete">
+    <item name="android:textColor">@color/onBackground</item>
+    <item name="strokeColor">@color/onBackground30</item>
+    <item name="android:paddingTop">@dimen/button_padding_vertical</item>
+    <item name="android:paddingBottom">@dimen/button_padding_vertical</item>
+  </style>
+
+  <style name="ButtonShapeAppearance" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">100dp</item>
+  </style>
+
+  <style name="CovPassCardView">
+    <item name="cardCornerRadius">@dimen/grid_two</item>
+  </style>
+
+  <style name="CovPassCardView.Elevated">
+    <item name="cardElevation">@dimen/elevation</item>
+  </style>
+
+  <style name="CovPassCardView.Level">
+    <item name="cardElevation">0dp</item>
+  </style>
+
+  <style name="RoundedCornersDialogTheme" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+    <item name="colorSurface">@color/backgroundSecondary</item>
+    <item name="elevation">0dp</item>
+    <item name="android:textAllCaps">false</item>
+    <item name="materialAlertDialogBodyTextStyle">@style/DialogBodyTextStyle</item>
+    <item name="buttonBarPositiveButtonStyle">@style/DialogButtonStyle.Bold</item>
+    <item name="buttonBarNegativeButtonStyle">@style/DialogButtonStyle</item>
+    <item name="shapeAppearanceOverlay">@style/DialogShapeAppearance</item>
+  </style>
+
+  <style name="DialogBodyTextStyle" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+    <item name="android:textColor">@color/onBackground</item>
+    <item name="android:textSize">@dimen/textsize_dialog</item>
+    <item name="android:fontFamily">@font/ibmplexsans_text</item>
+    <item name="android:lineSpacingMultiplier">1.2</item>
+    <item name="android:paddingBottom">@dimen/grid_three</item>
+    <item name="android:paddingTop">@dimen/grid_one_half</item>
+  </style>
+
+  <style name="DialogButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+    <item name="android:textColor">@color/brandAccent70</item>
+    <item name="android:textSize">@dimen/textsize_dialog</item>
+    <item name="android:fontFamily">@font/ibmplexsans_text</item>
+    <item name="rippleColor">@color/brandAccent40</item>
+  </style>
+
+  <style name="DialogButtonStyle.Bold">
+    <item name="android:textColor">@color/brandAccent70</item>
+    <item name="android:textSize">@dimen/textsize_dialog</item>
+    <item name="android:fontFamily">@font/ibmplexsans_semibold</item>
+  </style>
+
+  <style name="DialogShapeAppearance">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">@dimen/dialog_corner_size</item>
+  </style>
+
+  <style name="NavigationField" parent="Header.OnBackground.Small">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:minHeight">@dimen/grid_six</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:paddingTop">@dimen/grid_one_half</item>
+    <item name="android:paddingBottom">@dimen/grid_one_half</item>
+    <item name="android:paddingStart">@dimen/grid_three</item>
+    <item name="android:paddingEnd">@dimen/grid_three</item>
+    <item name="android:textColorLink">@color/onBackground</item>
+    <item name="drawableEndCompat">@drawable/arrow_right_blue</item>
+  </style>
+
+  <style name="Divider">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">@dimen/grid_eighth</item>
+    <item name="android:background">@color/onBackground20</item>
+  </style>
+
+</resources>

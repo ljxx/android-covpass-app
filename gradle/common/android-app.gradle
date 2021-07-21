@@ -1,0 +1,80 @@
+def generatedProps = new Properties()
+def _propertiesFile = file("$rootDir/generated.properties")
+if (_propertiesFile.exists()) {
+    _propertiesFile.withInputStream { generatedProps.load(it) }
+}
+
+/*
+ * (C) Copyright IBM Deutschland GmbH 2021
+ * (C) Copyright IBM Corp. 2021
+ */
+
+enum Obfuscation {
+    None,
+    Debuggable,
+    FullWithLogging,
+    Full,
+}
+
+ext.Obfuscation = Obfuscation
+
+class Config {
+    Obfuscation obfuscation = Obfuscation.Full
+    Integer minVersion = null
+    Integer targetVersion = null
+    Integer compileSdkVersion = null
+    List<String> disableAndroidLints = []
+    Boolean kotlinExplicitApiMode = true
+}
+
+ext.androidApp = { args = [:] ->
+    apply plugin: 'com.android.application'
+    apply from: "$rootDir/gradle/common/android-common.gradle"
+
+    Config config = new Config(args)
+
+    androidCommon(
+        minVersion: config.minVersion,
+        targetVersion: config.targetVersion,
+        compileSdkVersion: config.compileSdkVersion,
+        disableAndroidLints: config.disableAndroidLints,
+        kotlinExplicitApiMode: config.kotlinExplicitApiMode,
+    )
+
+    android {
+        defaultConfig {
+            versionCode generatedProps.get("versionCode", 2) as Integer
+        }
+
+        buildTypes {
+            debug {
+                applicationIdSuffix ".debug"
+            }
+            release {
+                if (config.obfuscation != Obfuscation.None) {
+                    if (config.obfuscation == Obfuscation.Debuggable) {
+                        debuggable true
+                    }
+                    minifyEnabled true
+
+                    def obfuscationRules = [
+                        // XXX: We disable optimizations because they're too brittle.
+                        getDefaultProguardFile('proguard-android.txt'),
+                    ]
+                    if (config.obfuscation == Obfuscation.Debuggable) {
+                        obfuscationRules.add("$rootDir/gradle/common/proguard-rules-debug.pro")
+                    }
+                    obfuscationRules.addAll([
+                        'proguard-rules.pro',
+                    ])
+                    proguardFiles(*obfuscationRules)
+                }
+            }
+        }
+
+        packagingOptions {
+            // See https://github.com/Kotlin/kotlinx.coroutines#avoiding-including-the-debug-infrastructure-in-the-resulting-apk
+            exclude "DebugProbesKt.bin"
+        }
+    }
+}

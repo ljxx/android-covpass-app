@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ (C) Copyright IBM Deutschland GmbH 2021
+  ~ (C) Copyright IBM Corp. 2021
+  -->
+
+<resources>
+
+  <declare-styleable name="RoundImageButton">
+    <attr name="round_button_icon" format="reference" />
+    <attr name="round_button_background" format="reference" />
+  </declare-styleable>
+
+</resources>

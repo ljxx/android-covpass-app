@@ -1,0 +1,35 @@
+/*
+ * (C) Copyright IBM Deutschland GmbH 2021
+ * (C) Copyright IBM Corp. 2021
+ */
+
+class Config {
+    Integer minVersion = null
+    Integer targetVersion = null
+    Integer compileSdkVersion = null
+    List<String> disableAndroidLints = []
+    Boolean kotlinExplicitApiMode = true
+    List<String> kotlinCompilerArgs = []
+}
+
+ext.androidLibrary = { args = [:] ->
+    apply plugin: 'com.android.library'
+    apply from: "$rootDir/gradle/common/android-common.gradle"
+
+    Config config = new Config(args)
+
+    androidCommon(
+        minVersion: config.minVersion,
+        targetVersion: config.targetVersion,
+        compileSdkVersion: config.compileSdkVersion,
+        disableAndroidLints: config.disableAndroidLints,
+        kotlinExplicitApiMode: config.kotlinExplicitApiMode,
+        kotlinCompilerArgs: config.kotlinCompilerArgs,
+    )
+
+    android {
+        defaultConfig {
+            consumerProguardFiles 'consumer-rules.pro'
+        }
+    }
+}

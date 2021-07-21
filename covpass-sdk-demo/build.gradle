@@ -1,0 +1,11 @@
+/*
+ * (C) Copyright IBM Deutschland GmbH 2021
+ * (C) Copyright IBM Corp. 2021
+ */
+
+dependencies {
+    api project(':covpass-sdk')
+}
+
+apply from: project(":covpass-sdk").file("download-dsc-list.gradle")
+addDscList("https://de.test.dscg.ubirch.com/trustList/DSC/")

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ (C) Copyright IBM Deutschland GmbH 2021
+  ~ (C) Copyright IBM Corp. 2021
+  -->
+
+<!--This file contains common strings which have to be overridden in both apps-->
+<resources>
+
+  <string name="app_information_title"/>
+  <string name="app_information_message"/>
+  <string name="app_information_title_open_source"/>
+  <string name="app_information_title_faq_linked"/>
+  <string name="app_information_title_company_details_linked"/>
+  <string name="app_information_version_label"/>
+
+  <string name="error_standard_unexpected_title"/>
+  <string name="error_standard_unexpected_message"/>
+  <string name="error_standard_unexpected_button_title"/>
+  <string name="error_no_connection_to_server_title"/>
+  <string name="error_no_connection_to_server_message"/>
+  <string name="error_no_connection_to_server_button_title"/>
+
+  <string name="start_onboarding_button_title"/>
+  <string name="fourth_onboarding_page_second_selection_linked"/>
+
+  <string name="error_scan_present_data_is_not_supported_title"/>
+  <string name="error_scan_present_data_is_not_supported_message"/>
+  <string name="error_scan_present_data_is_not_supported_button_title"/>
+  <string name="error_scan_qrcode_cannot_be_parsed_title"/>
+  <string name="error_scan_qrcode_cannot_be_parsed_message"/>
+  <string name="error_scan_qrcode_cannot_be_parsed_button_title"/>
+  <string name="vaccination_fourth_onboarding_page_message"/>
+  <string name="app_information_title_datenschutz"/>
+  <string name="app_information_message_open_source"/>
+
+  <string name="app_information_title_contact"/>
+  <string name="app_information_message_contact_support"/>
+  <string name="app_information_message_contact_support_phone"/>
+  <string name="app_information_message_contact_support_mail"/>
+  <string name="app_information_message_contact_info"/>
+  <string name="app_information_message_contact_info_mail"/>
+
+</resources>

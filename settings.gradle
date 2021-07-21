@@ -1,0 +1,44 @@
+rootProject.name = 'android-covpass-app'
+
+/*
+ * (C) Copyright IBM Deutschland GmbH 2021
+ * (C) Copyright IBM Corp. 2021
+ */
+
+// SDK modules
+include ':covpass-bom'
+include ':covpass-sdk'
+include ':covpass-sdk-demo'
+
+// SDK utils
+include ':annotations'
+//include ':covpass-base45'
+include ':covpass-http'
+include ':covpass-logging'
+
+// Apps
+include ':app-covpass-check-demo'
+include ':app-covpass-check-prod'
+include ':app-covpass-demo'
+include ':app-covpass-prod'
+include ':common-app-covpass'
+include ':common-app-covpass-check'
+include ':common-app'
+
+// App-only utils (not used by SDK)
+include ':android-utils'
+include ':navigation'
+include ':securityprovider'
+
+// How to include locally cloned repos / composing builds:
+// Create a settings-local.gradle file and add entries like this to it:
+//
+// substituteAllModules '../path-to-other-repo'
+//
+// Note that settings-local.gradle is ignored by Git, so you can't mistakenly commit it and you can adjust the paths
+// to your local setup without any conflicts with other people.
+apply from: "$rootDir/gradle/common/settings.gradle"
+def localSettings = "$rootDir/settings-local.gradle"
+if (file(localSettings).exists()) {
+    apply from: localSettings
+}
