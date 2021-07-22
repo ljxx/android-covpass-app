@@ -11,8 +11,8 @@ import com.upokecenter.cbor.CBORException
 import de.rki.covpass.commonapp.R
 import de.rki.covpass.commonapp.dialog.DialogModel
 import de.rki.covpass.commonapp.dialog.showDialog
-import de.rki.covpass.logging.Lumber
 import de.rki.covpass.sdk.basefourfive.Base45DecodeException
+import de.rki.covpass.sdk.logginglib.Lumber
 
 /**
  * Common abstract base class for the app-specific error handlers. This one covers handling of errors that can occur in

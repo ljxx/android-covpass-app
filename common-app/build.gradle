@@ -9,7 +9,7 @@ dependencies {
 //    api project(":android-utils")
 //    api project(':covpass-http')
 //    api project(":navigation")
-    api project(":securityprovider")
+//    api project(":securityprovider")
     api project(':covpass-sdk')
     androidUI()
     zxing()

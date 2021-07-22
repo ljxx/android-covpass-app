@@ -14,7 +14,7 @@ include ':covpass-sdk-demo'
 //include ':annotations'
 //include ':covpass-base45'
 //include ':covpass-http'
-include ':covpass-logging'
+//include ':covpass-logging'
 
 // Apps
 //include ':app-covpass-check-demo'
@@ -28,7 +28,7 @@ include ':common-app'
 // App-only utils (not used by SDK)
 //include ':android-utils'
 //include ':navigation'
-include ':securityprovider'
+//include ':securityprovider'
 
 // How to include locally cloned repos / composing builds:
 // Create a settings-local.gradle file and add entries like this to it:

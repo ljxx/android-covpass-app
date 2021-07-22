@@ -23,6 +23,10 @@ dependencies {
     androidUI()
     coroutines()
     reactiveState()
+
+//    securityprovider
+    conscrypt()
+    bouncyCastle()
 }
 
 apply from: "$projectDir/download-dsc-list.gradle"
