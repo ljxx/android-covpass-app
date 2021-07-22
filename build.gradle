@@ -31,6 +31,9 @@ apply from: "$rootDir/gradle/common/repos.gradle"
 setupRepos()
 apply from: "$rootDir/gradle/common/dependency-updates.gradle"
 
+//covpass-bom
+apply from: "$rootDir/gradle/common/dependency-versions-bom.gradle"
+
 apply from: "$rootDir/gradle/common/scm-version.gradle"
 setupScmVersion()
 // FIXME: Change this when we switch to Maven Central

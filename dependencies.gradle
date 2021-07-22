@@ -93,7 +93,7 @@ dependencies {
         }
 
         base = {
-            api platform(project(':covpass-bom'))
+//            api platform(project(':covpass-bom'))
 
             testImplementation 'junit:junit'
 

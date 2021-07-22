@@ -27,6 +27,9 @@ dependencies {
 //    securityprovider
     conscrypt()
     bouncyCastle()
+
+    //covpass-bom
+    versionConstraints()
 }
 
 apply from: "$projectDir/download-dsc-list.gradle"
